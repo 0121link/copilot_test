@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio showcasing web development projects and skills including HTML, CSS, JavaScript, and Python">
+    <link rel="stylesheet" href="style.css">
+    <title>Developer Portfolio | CoPilot Test</title>
+</head>
+<body>
+    <header role="banner">
+        <h1>CoPilot Test</h1> 
+        <nav role="navigation" aria-label="Main navigation">
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="#" aria-current="page">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact-form">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
+        <section id="about-me" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur</p> 
+        </section>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('category1')">Category 1</button>
+                <button onclick="filterProjects('category2')">Category 2</button>
+                <button onclick="filterProjects('category3')">Category 3</button>
+            </div>
+            <div class="project-grid">
+                <div class="project" data-category="category1">
+                    <h3>Project 1</h3>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus</article>
+                    <figure>
+                        <img src="https://picsum.photos/id/10/200" alt="Project 1" onclick="openLightbox(this)">
+                    </figure>
+                </div>
+                <div class="project" data-category="category2">
+                    <h3>Project 2</h3>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus</article>
+                    <figure>
+                        <img src="https://picsum.photos/id/20/200" alt="Project 2" onclick="openLightbox(this)">
+                    </figure>
+                </div>
+                <div class="project" data-category="category3">
+                    <h3>Project 3</h3>
+                    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus</article>
+                    <figure>
+                        <img src="https://picsum.photos/id/30/200" alt="Project 3" onclick="openLightbox(this)">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </section>
+        <form action="#" id="contact-form" onsubmit="return validateForm()">
+            <h2>Contact Me</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="name-error">Name is required.</span>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="email-error">Valid email is required.</span>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            <span class="error-message" id="message-error">Message is required.</span>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 CoPilot Test</p>
+    </footer>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
